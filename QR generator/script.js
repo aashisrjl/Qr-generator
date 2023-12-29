@@ -1,16 +1,14 @@
-function generator(){
-    var link=document.getElementById("link").value;
-    var qr=document.getElementById("qr");
+function generator() {
+    var link = document.getElementById("link").value;
+    var qr = document.getElementById("qr");
 
-    //cleaar previous
-    qr.innerHTML="";
+    // Clear previous
+    qr.innerHTML = "";
 
-    //new qr code
-    var qrcode= new QRcode(qr,{
-        input:url,
-        height:200,
-        width:200
-
+    // New QR code
+    var qrcode = new QRCode(qr, {
+        text: link,
+        height: 150,
+        width: 150
     });
-
 }
